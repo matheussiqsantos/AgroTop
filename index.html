@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>AgroTop - Silo DE Soja</title>
+</head>
+<body>
+    <main class="silo-card" id="silo-panel">
+        
+        <header class="silo-header">
+            <div class="header-info">
+                <h1>SILO DE SOJA</h1>
+                <p>Cooperativa AgroTop</p>
+            </div>
+            <div class="panel-led-box">
+                <span class="led-label">STATUS</span>
+                <div id="status-led" class="led led-ok"></div>
+            </div>
+        </header>
+
+        <div id="max-alert" class="alert-banner hidden">
+            ⚠️ CAPACIDADE MÁXIMA ATINGIDA - ESTEIRA TRAVADA
+        </div>
+
+        <section class="silo-center-area">
+            
+            <div class="silo-structure">
+                <div id="silo-grain" class="silo-grain" style="height: 0%;"></div>
+                
+                <div class="silo-internal-data">
+                    <span class="internal-label">Carga Atual</span>
+                    <div class="internal-value"><span id="current-weight">0</span> <small>kg</small></div>
+                </div>
+            </div>
+
+            <div class="silo-limits">
+                <span>MÁX: 5.000 kg</span>
+                <span>MIN: 0 kg</span>
+            </div>
+
+        </section>
+
+        <footer class="control-actions">
+            <button id="btn-load" class="btn btn-load">ACIONAR ESTEIRA (+500KG)</button>
+            <button id="btn-unload" class="btn btn-unload">LIBERAR PARA CAMINHÃO (RESETAR)</button>
+        </footer>
+
+    </main>
+</body>
+</html>
